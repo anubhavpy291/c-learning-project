@@ -1,15 +1,13 @@
-#include <stdint.h>
+#include <stdio.h>
 
 int main(){
-    int myAge = 43;     // An int variable  
-    int* ptr = &myAge;  // A pointer variable, with the name ptr, that stores the address of myAge  
-  
-// Output the value of myAge (43)  
-  
-// Output the memory address of myAge (0x7ffe5367e044)  
-    printf("%p\n", &myAge);  
-  
-// Output the memory address of myAge with the pointer (0x7ffe5367e044)  
-    printf("%p\n", ptr);  
-    return 0;   
+    int a = 39;
+    int *ptr = &a;
+    printf("%d\n",*ptr);
+    printf("%p\n",ptr);
+    int b[] = {1,2,3,4,5};
+    int len = sizeof(b) / sizeof(b[0]);
+    for (int i = 0; i < len; i++){
+        printf("%d\n",*(b+i));
+    }
 }
